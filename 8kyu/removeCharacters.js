@@ -49,7 +49,6 @@ function removeChar(str) {
 
 console.log(removeChar('eloquent'));
 console.log(removeChar('country'));
-console.log(removeChar('person'));
 console.log(removeChar('place'));
 console.log(removeChar('ooopsss'));
 console.log(removeChar('ab'));
