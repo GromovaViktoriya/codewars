@@ -39,7 +39,7 @@ function highAndLow(numbers){
     let arr = numbers.split(' ').map(Number);
     let highest = Math.max(...arr);
     let lowest = Math.min(...arr);
-    return `${highest} ${lowest} `
+    return `${highest} ${lowest}`
 }
 
 console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
