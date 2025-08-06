@@ -32,7 +32,7 @@
 //
 //         }
 //     }
-//     return `${highest} ${lowest} `
+//     return `${highest} ${lowest}`
 // }
 
 function highAndLow(numbers){
