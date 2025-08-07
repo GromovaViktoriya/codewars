@@ -25,7 +25,7 @@ function abbrevName(name) {
 }
 
 console.log(abbrevName("Sam Harris"));
-console.log(abbrevName("Patrick Feenan"));
+console.log(abbrevName("Patrick Feenan kelsea"));
 console.log(abbrevName("Evan Cole"));
 console.log(abbrevName("P Favuzzi"));
 console.log(abbrevName("David Mendieta"))
