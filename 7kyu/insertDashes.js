@@ -21,10 +21,7 @@ function insertDash(num) {
     let result = ''
     for (let i = 0; i < str.length; i++) {
         result += str[i]
-        if (i === str.length - 1) {
-            return result
-        }
-        if (str[i] % 2 !== 0 && str[i + 1] % 2 !== 0) {
+        if (str[i] % 2 !== 0 && str[i + 1] && str[i + 1] % 2 !== 0) {
             result += ('-')
         }
     }
