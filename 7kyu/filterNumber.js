@@ -18,7 +18,8 @@
 
 // SOLUTION
 function filterString(value) {
-   return value.split("").filter(num => num >= '0' && num <= '9').join("")
+    const result = value.split("").filter(num => num >= '0' && num <= '9').join("")
+    return Number(result)
 }
 
 console.log(filterString("123"))
