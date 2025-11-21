@@ -24,3 +24,4 @@ function filterString(value) {
 console.log(filterString("123"))
 console.log(filterString("a1b2c3"))
 console.log(filterString("aa1bb2cc3dd"))
+console.log(filterString("a0b1c2"))
