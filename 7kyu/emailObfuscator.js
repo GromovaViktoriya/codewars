@@ -32,9 +32,10 @@
 
 // SOLUTION
 obfuscate = function (email) {
-    let arr = email.split('')
-    arr.forEach((item, index) => item === '@' ? arr[index] = ' [at] ' : item === '.' ? arr[index] = ' [dot] ' : item)
-    return arr.join('')
+    // let arr = email.split('')
+    // arr.forEach((item, index) => item === '@' ? arr[index] = ' [at] ' : item === '.' ? arr[index] = ' [dot] ' : item)
+    // return arr.join('')
+    return email.split('@').join(' [at] ').split('.').join(' [dot] ')
 }
 
 console.log(obfuscate('test@123.com'))
