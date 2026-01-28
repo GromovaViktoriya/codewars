@@ -19,7 +19,8 @@
 
 // SOLUTION
 function distinct(a) {
-    return [...new Set(a)]
+    return a.filter((item, index) => a.indexOf(item) === index)
+    // return [...new Set(a)]
 }
 
 console.log(distinct([1]))
