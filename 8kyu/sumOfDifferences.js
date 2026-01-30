@@ -25,7 +25,10 @@ function sumOfDifferences(arr) {
     // }
     // return diff.reduce((a, b) => a + b, 0)
 
-    return arr.sort((a, b) => b - a).map((num, i) => num - arr[i + 1] || 0).reduce((a, b) => a + b)
+    return arr
+        .sort((a, b) => b - a)
+        .map((num, i) => num - arr[i + 1] || 0)
+        .reduce((a, b) => a + b)
 }
 
 console.log(sumOfDifferences([1, 2, 10]))
