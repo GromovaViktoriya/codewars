@@ -20,11 +20,9 @@
 
 // SOLUTION
 function array(string) {
-    let arr = string.split(',')
-    if (string !== '' && arr.length > 2) {
-        let newArr = arr.filter(el => el !== arr[0] && el !== arr[arr.length - 1])
-        return newArr.join(' ')
-    } else return null
+    const arr = string.split(',')
+    if (arr.length <= 2) return null
+    return arr.slice(1, -1).join(' ')
 }
 
 console.log(array(''))
