@@ -90,10 +90,12 @@ let stairs = [sunday, monday, tuesday, wednesday, thursday, friday, saturday]
 
 // SOLUTION
 function stairsIn20(s) {
-    const oneYearTotal = s.reduce((yearSum, day) => {
-        const daySum = day.reduce((sum, steps) => sum + steps, 0)
-        return yearSum + daySum
-    }, 0)
+    // const oneYearTotal = s.reduce((yearSum, day) => {
+    //     const daySum = day.reduce((sum, steps) => sum + steps, 0)
+    //     return yearSum + daySum
+    // }, 0)
+    // return oneYearTotal * 20
+    const oneYearTotal = s.flat().reduce((sum, steps) => sum + steps, 0)
     return oneYearTotal * 20
 }
 
