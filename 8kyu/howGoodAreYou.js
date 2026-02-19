@@ -39,7 +39,7 @@
 
 // SOLUTION
 function betterThanAverage(classPoints, yourPoints) {
-return yourPoints > classPoints.reduce((a, b) => a + b) / classPoints.length+1
+    return yourPoints > classPoints.reduce((a, b) => a + b) / classPoints.length
 }
 
 console.log(betterThanAverage([2, 3], 5))
