@@ -13,6 +13,8 @@
 //     assert.strictEqual(areaOrPerimeter(3,  3),  9);
 //     assert.strictEqual(areaOrPerimeter(6, 10), 32);
 
+
+// SOLUTION
 const areaOrPerimeter = function (l, w) {
     return l === w ? l * w : (l + w) * 2;
 };
