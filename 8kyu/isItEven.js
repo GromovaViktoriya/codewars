@@ -18,6 +18,7 @@
 //     assert.strictEqual(testEven(-4), true, "testEven for 2");
 
 
+// SOLUTION
 function testEven(n) {
     return n % 2 === 0;
 }
