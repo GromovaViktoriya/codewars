@@ -20,11 +20,13 @@
 
 // SOLUTION
 function strCount(str, letter){
-  let count = 0;
-  for(let i = 0; i < str.length; i++){
-    if(str[i] === letter) count++;
-  }
-  return count;
+  // let count = 0;
+  // for(let i = 0; i < str.length; i++){
+  //   if(str[i] === letter) count++;
+  // }
+  // return count;
+
+   return str.split('').filter(c => c === letter).length;
 }
 
 console.log(strCount('Hello', 'o'))
