@@ -20,6 +20,7 @@
 function digitalRoot(n) {
     let arr = n.toString().split('')
     return n < 10 ? n : digitalRoot(arr.reduce((acc, num) => acc + Number(num), 0))
+    //return (n - 1) % 9 + 1;
 }
 
 console.log(digitalRoot(16))
