@@ -25,6 +25,8 @@ function solution(str) {
         result[result.length - 1] += "_"
     }
     return result;
+
+    //return (str + "_").match(/.{2}/g) || [];
 }
 
 console.log(solution("abcdef"))
