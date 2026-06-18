@@ -34,11 +34,24 @@
 //     doTest("}}]]))}])", false);
 
 // SOLUTION
-function validBraces(braces){
+function validBraces(braces) {
     while (braces.includes('()') || braces.includes('[]') || braces.includes('{}')) {
         braces = braces.replaceAll(/\(\)|\[]|\{}/g, '')
     }
     return braces.length === 0;
+
+    //  for (let i = 0, let depth = []; i < braces.length; i++) {
+    //     switch (braces[i]) {
+    //       case '(': case '[': case '{': {
+    //       depth.push(braces[i]);
+    //       break
+    //       }
+    //       case ')': if (depth.pop() != '(') return false; break;
+    //       case ']': if (depth.pop() != '[') return false; break;
+    //       case '}': if (depth.pop() != '{') return false; break;
+    //     }
+    //   }
+    //   return depth.length == 0;
 }
 
 console.log(validBraces('()'))
