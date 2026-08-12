@@ -31,10 +31,10 @@
 // SOLUTION
 function wave(str) {
     let arr = []
-     str.split('').forEach((char, index) => {
+    str.split('').forEach((char, index) => {
         if (char !== ' ') {
             let start = str.slice(0, index)
-            let end = str.slice(index+1)
+            let end = str.slice(index + 1)
             let strEl = start + char.toUpperCase() + end
             arr.push(strEl)
         }
