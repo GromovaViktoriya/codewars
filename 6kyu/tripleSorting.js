@@ -1,0 +1,63 @@
+// DESCRIPTION
+// Tale University is a bit messy, and can't maintain an ordered list of their student. Tale's dean wants to print a
+// sortet list of his students by the gpa, last name and age and post it on the walls so everybody can be impressed of
+// his great students.
+//
+// Given a list of students, sort them by (from most important to least important):
+//
+// GPA (descending)
+// First letter of last name (ascending)
+// Age (ascending)
+// And the class Student:
+//
+// class Student {
+//   constructor(age, gpa, fullName) {
+//     this.age = age;
+//     this.gpa = gpa;
+//     this.fullName = fullName;
+//   };
+// };
+// Return the sorted result as full names string, comma separated.
+//
+// For Example, given the list (name, age, gpa):
+//
+// David Goodman, 23, 88
+// Mark Rose, 25, 82
+// Jane Doe, 22, 90
+// Jane Dane, 25, 90
+// sort(students) should return "Jane Doe,Jane Dane,David Goodman,Mark Rose"
+
+// TESTS
+//   it("basic tests", function() {
+//     var students = [new Student(23, 88, "David Goodman"),
+//                     new Student(25, 82, "Mark Rose"),
+//                     new Student(22, 90, "Jane Doe"),
+//                     new Student(25, 90, "Jane Dane")];
+//     Test.assertEquals(sort(students), "Jane Doe,Jane Dane,David Goodman,Mark Rose");
+
+//SOLUTION
+class Student {
+    constructor(age, gpa, fullName) {
+        this.age = age;
+        this.gpa = gpa;
+        this.fullName = fullName;
+    };
+}
+
+const students = [new Student(23, 88, "David Goodman"),
+    new Student(25, 82, "Mark Rose"),
+    new Student(22, 90, "Jane Doe"),
+    new Student(25, 90, "Jane Dane")];
+
+function sort(students) {
+    let result = [];
+    students.sort((a, b) => b.gpa - a.gpa
+        || a.fullName.split(' ')[1][0].localeCompare(b.fullName.split(' ')[1][0])
+        || a.age - b.age
+    ).forEach((student) => {
+        result.push(student.fullName);
+    })
+    return result.join(',')
+}
+
+console.log(sort(students));
